@@ -1,0 +1,302 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\ContainerIDCapture.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ContainerIDCapture.ico"
+IDI_ICON_CAMERA         ICON                    "res\\camera.ico"
+IDI_ICON_CAMERACONNECT  ICON                    "res\\camera-connect.ico"
+IDI_ICON_DEVICE         ICON                    "res\\Device.ico"
+IDI_ICON_PLCDEVICE      ICON                    "res\\PLCdevice.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 ContainerIDCapture"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "ContainerIDCapture，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2016",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_CONTAINERIDCAPTURE_DIALOG DIALOGEX 0, 0, 669, 405
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "箱号抓拍测试-上海迈高网络"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "启动(&S)",IDC_BUTTON_START,2,1,50,18
+    PUSHBUTTON      "停止(&T)",IDC_BUTTON_STOP,61,1,50,18,WS_DISABLED
+    EDITTEXT        IDC_EDIT_PLCLISTENPORT,160,4,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_LIST_HOISTHEIGHT,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,530,22,136,89
+    CONTROL         "",IDC_TREECAMERA,"SysTreeView32",TVS_HASLINES | TVS_EDITLABELS | WS_BORDER | WS_HSCROLL | WS_TABSTOP,530,114,136,233
+    CONTROL         "启用IPC播放器",IDC_CHECK_IPCPLAYSDK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,540,365,56,10
+    CONTROL         "快速连接",IDC_CHECK_PARALLEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,607,365,39,10
+    CONTROL         "启用硬解码",IDC_CHECK_ENABLEHWACCEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,540,377,44,10
+    CONTROL         "强制 I 帧",IDC_CHECK_FORCEIFRAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,607,377,39,10
+    LTEXT           "",IDC_STATIC_STATUSBAR,0,393,669,12,0,WS_EX_STATICEDGE
+    CONTROL         "",IDC_STATIC_FRAME,"Static",SS_BLACKFRAME,0,22,526,370
+    LTEXT           "PLC Server:",IDC_STATIC_PLC,21,62,40,8,NOT WS_VISIBLE
+    CONTROL         "",IDC_IPADDRESS_PLC,"SysIPAddress32",NOT WS_VISIBLE | WS_TABSTOP,63,58,74,15
+    LTEXT           "端口:",IDC_STATIC_PLCPORT,141,62,17,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PLCPORT,165,59,40,15,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    PUSHBUTTON      "连接(&C)",IDC_BUTTON_CONNECT,208,58,44,17,NOT WS_VISIBLE
+    PUSHBUTTON      "断开(&D)",IDC_BUTTON_DISCONNECT,255,58,44,17,NOT WS_VISIBLE
+    LTEXT           "查询周期(ms):",IDC_STATIC_QUERYPERIOD,302,62,45,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_QUERYPERIOD,348,59,31,15,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    GROUPBOX        "播放选项",IDC_STATIC,531,352,137,40
+    LTEXT           "PLC端口:",IDC_STATIC,126,6,28,8
+END
+
+IDD_DIALOG_CAMERAPROPERTY DIALOGEX 0, 0, 237, 109
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "配置相机"
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_IPADDRESS,"SysIPAddress32",WS_TABSTOP,35,17,75,15
+    COMBOBOX        IDC_COMBO_MANUFACTURER,150,17,76,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_ACCOUNT,35,34,75,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD,150,34,75,15,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PORT,35,52,75,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PLCNODE,150,53,75,15,ES_AUTOHSCROLL | ES_READONLY
+    DEFPUSHBUTTON   "保存(&S)",IDOK,115,83,50,18
+    PUSHBUTTON      "取消(&C)",IDCANCEL,170,83,50,18
+    LTEXT           "IP地址:",IDC_STATIC,11,17,23,8
+    LTEXT           "厂商:",IDC_STATIC,120,17,17,8
+    LTEXT           "端口:",IDC_STATIC,11,54,17,8
+    LTEXT           "帐号:",IDC_STATIC,11,36,17,8
+    LTEXT           "密码:",IDC_STATIC,120,36,17,8
+    GROUPBOX        "像机属性",IDC_STATIC,3,2,230,74
+    LTEXT           "PLC结点:",IDC_STATIC,120,55,28,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ContainerIDCapture.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "ContainerIDCapture.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_CONTAINERIDCAPTURE_DIALOG, DIALOG
+    BEGIN
+        TOPMARGIN, 5
+        HORZGUIDE, 13
+    END
+
+    IDD_DIALOG_CAMERAPROPERTY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_POPUP MENU 
+BEGIN
+    POPUP "PopMenu"
+    BEGIN
+        MENUITEM "连接相机",                        ID_CONNECT_ALLCAMERA
+        MENUITEM "断开相机",                        ID_DISCONNECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "添加相机",                        32786
+        MENUITEM "删除相机",                        ID_DELETE_CAMERA
+        MENUITEM "修改相机",                        32787
+        MENUITEM "删除所有相机",                      ID_DELETE_ALLCAMERA
+        MENUITEM SEPARATOR
+        MENUITEM "添加PLC结点",                     ID_ADD_PLCNODE
+        MENUITEM "删除PLC结点",                     ID_DELETE_PLCNODE
+        MENUITEM "修改PLC结点",                     32788
+        MENUITEM "删除所有PLC",                     32789
+    END
+END
+
+IDR_MENU_POPUPPLC MENU 
+BEGIN
+    POPUP "PopMenu"
+    BEGIN
+        MENUITEM "删除",                          ID_DELETE_PLC
+        MENUITEM "删除所有",                        ID_DELETE_ALLPLC
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_CAMERAPROPERTY DLGINIT
+BEGIN
+    IDC_COMBO_MANUFACTURER, 0x403, 7, 0
+0xb2b0, 0xb6d1, 0xbfca, "\000" 
+    IDC_COMBO_MANUFACTURER, 0x403, 5, 0
+0xa3ba, 0xb5bf, "\000" 
+    IDC_COMBO_MANUFACTURER, 0x403, 5, 0
+0xf3b4, 0xaabb, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 ContainerIDCapture(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\ContainerIDCapture.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
